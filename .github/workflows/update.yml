@@ -1,0 +1,42 @@
+name: update market data
+
+on:
+  schedule:
+    # 21:30 UTC weekdays — shortly after the US equity close
+    - cron: "30 21 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: market-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and export
+        run: python -m market_tracker update --export --quiet --no-color
+
+      - name: Commit refreshed dashboard
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html data/latest.json
+          git diff --staged --quiet || git commit -m "data: refresh $(date -u +%Y-%m-%d)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - uses: actions/deploy-pages@v4

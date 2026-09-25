@@ -1,0 +1,110 @@
+{
+  "groups": {
+    "Index & Broad Market": [
+      {
+        "symbol": "^GSPC",
+        "label": "S&P 500"
+      },
+      {
+        "symbol": "^IXIC",
+        "label": "Nasdaq Composite"
+      },
+      {
+        "symbol": "^DJI",
+        "label": "Dow Jones Industrial"
+      },
+      {
+        "symbol": "^RUT",
+        "label": "Russell 2000"
+      },
+      {
+        "symbol": "^VIX",
+        "label": "CBOE Volatility Index"
+      }
+    ],
+    "ETFs": [
+      {
+        "symbol": "VOO",
+        "label": "Vanguard S&P 500"
+      },
+      {
+        "symbol": "QQQ",
+        "label": "Invesco Nasdaq 100"
+      },
+      {
+        "symbol": "VTI",
+        "label": "Vanguard Total Market"
+      },
+      {
+        "symbol": "SCHD",
+        "label": "Schwab US Dividend"
+      }
+    ],
+    "Equities": [
+      {
+        "symbol": "AAPL",
+        "label": "Apple"
+      },
+      {
+        "symbol": "MSFT",
+        "label": "Microsoft"
+      },
+      {
+        "symbol": "NVDA",
+        "label": "NVIDIA"
+      },
+      {
+        "symbol": "AMZN",
+        "label": "Amazon"
+      },
+      {
+        "symbol": "GOOGL",
+        "label": "Alphabet"
+      },
+      {
+        "symbol": "META",
+        "label": "Meta Platforms"
+      },
+      {
+        "symbol": "MU",
+        "label": "Micron Technology"
+      }
+    ],
+    "Crypto": [
+      {
+        "symbol": "BTC-USD",
+        "label": "Bitcoin"
+      },
+      {
+        "symbol": "ETH-USD",
+        "label": "Ethereum"
+      },
+      {
+        "symbol": "SOL-USD",
+        "label": "Solana"
+      }
+    ],
+    "Rates, FX & Commodities": [
+      {
+        "symbol": "^TNX",
+        "label": "US 10Y Treasury Yield"
+      },
+      {
+        "symbol": "DX-Y.NYB",
+        "label": "US Dollar Index"
+      },
+      {
+        "symbol": "EURUSD=X",
+        "label": "EUR/USD"
+      },
+      {
+        "symbol": "GC=F",
+        "label": "Gold Futures"
+      },
+      {
+        "symbol": "CL=F",
+        "label": "WTI Crude Futures"
+      }
+    ]
+  }
+}

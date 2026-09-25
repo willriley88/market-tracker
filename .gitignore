@@ -1,0 +1,15 @@
+# Generated database — rebuild with `python3 -m market_tracker update`
+data/*.db
+data/*.db-journal
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+.DS_Store
+*.swp
+.idea/
+.vscode/
